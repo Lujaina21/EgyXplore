@@ -48,3 +48,93 @@ body {
   background-attachment: scroll;
   background-repeat: no-repeat;
 }
+
+/*==================== Navbar ====================*/
+.nav-logo {
+  margin-left: 3rem;
+  margin-top: 37px;
+}
+.nav-links {
+  display: flex;
+  margin-top: -2rem;
+  align-items: center;
+  list-style: none;
+  padding-left: 17rem;
+  padding-right: 15rem;
+  padding-bottom: 9px;
+}
+.navitem {
+  margin-left: 28px;
+  font-size: 16px;
+  font-weight: 500;
+  position: relative;
+  transition: all 0.3s ease-in-out 0s;
+}
+.navitem > a {
+  color: #ffffff;
+}
+.navitem > a:hover {
+  color: black;
+}
+.navitem > a::before {
+  content: "";
+  position: absolute;
+  width: 45%;
+  height: 3px;
+  bottom: -2px;
+  left: 15px;
+  background-color: black;
+  visibility: hidden;
+  transform: scaleX(0);
+  transition: all 0.3s ease-in-out 0s;
+}
+.navitem > a:hover:before {
+  visibility: visible;
+  transform: scaleX(1.1);
+}
+.navBtns {
+  display: flex;
+  padding-bottom: 9px;
+  margin-left: 67rem;
+  margin-top: -34px;
+}
+.navBtns > select {
+  margin-left: -44px;
+  background-color: #e6e6e6;
+  opacity: 40%;
+  font-size: 13px;
+  height: 19px;
+  margin-top: 6px;
+  font-weight: var(--font-bold);
+  border: none;
+  border-radius: 4px;
+}
+.navBtns > select > option {
+  background-color: #e6e6e6;
+  opacity: 40%;
+  font-size: 13px;
+  font-weight: var(--font-bold);
+}
+.navBtns > a {
+  color: black;
+  font-weight: var(--font-semi-bold);
+  font-size: 18px;
+  padding: 2px 21px;
+}
+.nav-signin,
+.nav-signup {
+  background-color: #ffffff;
+  border-radius: 4px;
+  transition: all 0.3 ease-in-out 0s;
+}
+.nav-signin {
+  margin-left: 20px;
+}
+.nav-signup {
+  margin-left: 12px;
+}
+.nav-signin:hover,
+.nav-signup:hover {
+  opacity: 70%;
+}
+/*==================== Banner ====================*/
