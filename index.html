@@ -5,11 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>EgyXplore</title>
-    <!--======================= Main Template CSS file ============================= -->
+    <!--======================= CSS styling file ============================= -->
     <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="css/all.css" />
+    <!--======================= Icons file ============================= -->
+    <link rel="stylesheet" href="css/all.min.css" />
     <!--======================= Logo Icon ============================= -->
-    <link rel="shortcut icon" href="logo.png" />
+    <link rel="shortcut icon" href="imgs/camel.png" />
     <!--======================= Font Family ============================= -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -20,11 +21,312 @@
   </head>
 
   <body>
-    <!--============= Banner ================ -->
+    <!--============= Nav ================ -->
+    <header id="home" class="home">
+      <nav>
+        <div class="nav-center">
+          <div class="nav-header">
+            <img src="imgs/EgyXplore.png" alt="Logo" class="nav-logo" />
+          </div>
+          <!--links-->
+          <ul class="nav-links">
+            <li class="navitem">
+              <a href="#banner">Home</a>
+            </li>
+            <li class="navitem">
+              <a href="#destinations">Destinations</a>
+            </li>
+            <li class="navitem">
+              <a href="#about">About Us</a>
+            </li>
+            <li class="navitem">
+              <a href="#testimonial">Testimonial</a>
+            </li>
+            <li class="navitem">
+              <a href="#contact">Contact-Us</a>
+            </li>
+            <li class="navitem">
+              <a href="#interests">Interests</a>
+            </li>
+          </ul>
+          <div class="navBtns">
+            <select name="language" id="language">
+              <option value="eng">EN</option>
+              <option value="ar">AR</option>
+            </select>
+            <a href="#signIp" class="nav-signin">SIGN IN</a>
+            <a href="#signUp" class="nav-signup">SIGN UP</a>
+            <!-- <button class="nav_toggle">
+              <i class="fas fa-bars"></i>
+              </button> -->
+          </div>
+        </div>
+      </nav>
+    </header>
+     <!--============= Banner ================ -->
+    <section class="banner_section" id="banner">
+      <div class="texts">
+        <h4 class="pre-title-banner">Explore</h4>
+        <h3 class="title1-banner">The Culture of</h3>
+        <h1 class="title2-banner">EGYPT</h1>
+        <div class="social-icons">
+          <a href="https://www.facebook.com" target="_blank" class="fb">
+            <i class="fa-brands fa-facebook"></i>
+          </a>
+          <a href="https://www.twitter.com" target="_blank" class="x">
+            <i class="fa-brands fa-x-twitter"></i>
+          </a>
+          <a href="https://www.instagram.com" target="_blank" class="insta">
+            <i class="fa-brands fa-instagram"></i>
+          </a>
+        </div>
+      </div>
+      <br />
+      <div class="slide hi-slide">
+        <div class="hi-prev"></div>
+        <div class="hi-next"></div>
+        <ul>
+          <li>
+            <img src="imgs/img2.png" alt="" />
+          </li>
+          <li>
+            <img src="imgs/img8.png" alt="" />
+          </li>
+          <li>
+            <img src="imgs/camel.png" alt="" />
+          </li>
+          <li>
+            <img src="imgs/img12.png" alt="" />
+          </li>
+          <li>
+            <img src="imgs/sunset.png" alt="" />
+          </li>
+          <li>
+            <img src="imgs/img9.png" alt="" />
+          </li>
+          <li>
+            <img src="imgs/img1.png" alt="" />
+          </li>
+          <li>
+            <img src="imgs/img3.png" alt="" />
+          </li>
+        </ul>
+      </div>
+    </section>
+    <!--============= Discover ================ -->
+    <div class="discover-section">
+      <div class="discover-field">
+        <input
+          type="text"
+          class="discover-search"
+          placeholder="What would you like to discover"
+        />
+      </div>
+      <div class="discover-btn">
+        <a href="#inspire" class="inspire-btn">INSPIRE ME</a>
+      </div>
+    </div>
+    <!--======== Destinations ======== -->
+    <section class="destination-section" id="destinations">
+      <h2 class="dest-title tit">Top Destinations</h2>
+      <div class="img-collection">
+        <div class="boxC places">
+          <img src="imgs/cairo.png" alt="" class="cairo" />
+          <h4 class="caption">Cairo</h4>
+        </div>
+        <div class="boxA places">
+          <img src="imgs/alex.png" alt="" class="alex" />
+          <h4 class="caption">Alexandria</h4>
+        </div>
+        <div class="boxS places">
+          <img src="imgs/siwa.png" alt="" class="siwa" />
+          <h4 class="caption">Siwa Oasis</h4>
+        </div>
+        <div class="boxAS places">
+          <img src="imgs/Tour-to-Aswan.png" alt="" class="aswan" />
+          <h4 class="caption">Aswan</h4>
+        </div>
+        <div class="boxSH places">
+          <img src="imgs/sharm.png" alt="" class="sharm" />
+          <h4 class="caption">Sharm El Sheikh</h4>
+        </div>
+        <div class="boxL places">
+          <img src="imgs/temple shadow.png" alt="" class="luxor" />
+          <h4 class="caption">Luxor</h4>
+        </div>
+      </div>
+      <div class="explore-more">
+        <a href="#" class="explore-btn"
+          >Explore More <i id="right" class="fa-solid fa-angle-right"></i>
+        </a>
+      </div>
+    </section>
+    <!--============= Services ================ -->
+    <section class="services-section">
+      <h2 class="services-title tit">Our Services</h2>
+      <div class="services-boxes">
+        <div class="service">
+          <div class="service-icon">
+            <img src="imgs/calendar.png" alt="" />
+          </div>
+          <div class="card-txt">
+            <h3>Plan</h3>
+            <h6>
+              Create your ideal Egypt trip with customizable plans tailored to
+              your preferences
+            </h6>
+          </div>
+        </div>
+        <div class="service">
+          <div class="service-icon">
+            <img src="imgs/emergency_icon.png" alt="" />
+          </div>
+          <div class="card-txt">
+            <h3>Emergency Services</h3>
+            <h6>
+              Feel secure with our emergency services available to support you
+              during unexpected situations
+            </h6>
+          </div>
+        </div>
+        <div class="service">
+          <div class="service-icon">
+            <img src="imgs/scan.png" alt="" />
+          </div>
+          <div class="card-txt">
+            <h3>Scan</h3>
+            <h6>
+              Explore more details in your photos by simply uploading them to
+              uncover extra details during your Egypt trip!
+            </h6>
+          </div>
+        </div>
+        <div class="service">
+          <div class="service-icon">
+            <img src="imgs/scams_icon.png" alt="" />
+          </div>
+          <div class="card-txt">
+            <h3>Avoid Scams</h3>
+            <h6>
+              Stay protected from scam with our enhanced security measures for
+              worry-free travel in Egypt
+            </h6>
+          </div>
+        </div>
+      </div>
+      <div class="ss1">
+        <div class="ss1-left">
+          <img src="imgs/img4.png" alt="" />
+          <img src="imgs/rehla.png" alt="" />
+          <img src="imgs/luxor.png" alt="" />
+          <img src="imgs/image.png" alt="" />
+        </div>
+        <div class="ss1-right">
+          <h4 class="stitle">Explore 100+ Destinations</h4>
+          <p class="desc">
+            Discover the enchantment of Egypt across an array of 100+
+            destinations, each offering a unique blend of culture, history, and
+            natural beauty for an unforgettable exploration.
+          </p>
+          <a href="#ex" class="sbtn">Explore</a>
+        </div>
+      </div>
 
-    <!--======== Services & Destinations ======== -->
+      <div class="ss2">
+        <div class="ss2-left">
+          <h4 class="stitle">Explore By Specialty Travel Advisors</h4>
+          <p class="desc">
+            Enhance your travel experience with the expertise of our Specialty
+            Travel Advisors, who are committed to crafting unique and
+            unforgettable journeys through Egypt, tailored to your specific
+            interests and preferences.
+          </p>
+          <a href="#ex" class="sbtn">Explore</a>
+        </div>
 
-    <!--============= Interests ================ -->
+        <div class="ss2-right">
+          <div class="travel-boxes">
+            <!-- 1111111111111111111111 -->
+            <div class="travel">
+              <img src="imgs/ismailia.png" alt="Ismailia" />
+              <div class="txt-travel">
+                <h3>Ismailia</h3>
+                <p>
+                  a canal-side city in Egypt, charms with its scenic waterfront
+                  along the Suez Canal and a relaxed urban atmosphere.
+                </p>
+                <div class="updates">
+                  <div class="first">
+                    <img src="imgs/calendar_blue.png" alt="" />
+                    <span>1 Day Trip</span>
+                  </div>
+                  <div class="second">
+                    <img src="imgs/favs.png" alt="" />
+                    <span>4.2 stars</span>
+                  </div>
+                  <div class="third">
+                    <img src="imgs/views_icon 2.png" alt="" />
+                    <span>1456</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- 22222222222222222-->
+            <div class="travel">
+              <img src="imgs/fayoum oasis.png" alt="Fayoum Waterfalls" />
+              <div class="txt-travel">
+                <h3>Fayoum Oasis</h3>
+                <p>
+                  a canal-side city in Egypt, charms with its scenic waterfront
+                  along the Suez Canal and a relaxed urban atmosphere.
+                </p>
+                <div class="updates">
+                  <div class="first">
+                    <img src="imgs/calendar_blue.png" alt="" />
+                    <span>1 Day Trip</span>
+                  </div>
+                  <div class="second">
+                    <img src="imgs/favs.png" alt="" />
+                    <span>4.2 stars</span>
+                  </div>
+                  <div class="third">
+                    <img src="imgs/views_icon 2.png" alt="" />
+                    <span>1800</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- 33333333333333333333 -->
+            <div class="travel">
+              <img src="imgs/dahab.png" alt="Dahab" />
+              <div class="txt-travel">
+                <h3>Dahab</h3>
+                <p>
+                  a canal-side city in Egypt, charms with its scenic waterfront
+                  along the Suez Canal and a relaxed urban atmosphere.
+                </p>
+                <div class="updates">
+                  <div class="first">
+                    <img src="imgs/calendar_blue.png" alt="" />
+                    <span>1 Day Trip</span>
+                  </div>
+                  <div class="second">
+                    <img src="imgs/favs.png" alt="" />
+                    <span>4.2 stars</span>
+                  </div>
+                  <div class="third">
+                    <img src="imgs/views_icon 2.png" alt="" />
+                    <span>1456</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--============= Interests section ================ -->
 
     <!--============= Useful Info ================ -->
 
@@ -36,8 +338,13 @@
 
     <!--============= Footer ================ -->
 
-    <!--========= JS Files ========= -->
+   <!--========= JS Files ========= -->
     <script src="js/all.min.js"></script>
     <script src="js/main.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script type="text/javascript" src="js/jquery.hislide.js"></script>
+    <script>
+      $(".slide").hiSlide();
+    </script>
   </body>
 </html>
