@@ -528,9 +528,9 @@ body {
 .updates .third {
   background-color: var(--views-background);
 }
-.first,
-.second,
-.third {
+.updates .first,
+.updates .second,
+.updates .third {
   width: 95px;
   height: 36px;
   border-radius: 20px;
@@ -562,4 +562,180 @@ body {
 .third > img {
   margin: 7px 0 0 10px;
 }
-/*==================== Interests section ====================*/
+/*==================== Interests ====================*/
+.interests-section {
+  margin: 11rem 40px 6rem 73px;
+}
+.interest-title > h3 {
+  font-size: 30px;
+  margin: 0 0 3rem 1.5rem;
+  font-weight: var(--font-semi-bold);
+}
+.option > p {
+  text-align: center;
+}
+.beach_p {
+  margin-top: -12px;
+}
+.desert_p {
+  margin-top: -5px;
+}
+.option img {
+  margin: 10px 0 0 22px;
+}
+.mytabs {
+  display: flex;
+}
+.mytabs input[type="radio"] {
+  display: none;
+}
+.mytabs label {
+  background-color: var(--second-main-color);
+  border-radius: 5px;
+  width: 100px;
+  height: 100px;
+  box-shadow: 5px 5px 4px 0 var(--shadow);
+  margin-left: 26px;
+  font-size: 16px;
+  font-weight: var(--font-semi-bold);
+  transition: 0.2s all ease-in-out;
+}
+.mytabs label:hover,
+.mytabs input[type="radio"]:checked + label {
+  background: var(--main-color);
+}
+.interests-imgs {
+  display: flex;
+  margin: -2rem 0 0 -32rem;
+}
+.first-img > h4,
+.second-img > h4 {
+  margin: 1rem 0 1rem 10rem;
+}
+.first-img > p,
+.second-img > p {
+  text-align: center;
+  color: var(--input-color);
+  width: 450px;
+  height: 319px;
+  font-size: 14px;
+}
+.first-img {
+  margin-right: 7rem;
+}
+.mytabs .tab {
+  order: 1;
+  display: none;
+  margin-top: 16rem;
+}
+.mytabs input[type="radio"]:checked + label + .tab {
+  display: block;
+}
+
+/*====================== recommended section ==================*/
+.recommended-section {
+  margin-top: -13rem;
+  background-color: #d9e1e9;
+  position: relative;
+  overflow: hidden;
+  padding: 20px;
+}
+.recommended-section > h2 {
+  font-size: 35px;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+.recommended-container {
+  display: flex;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  margin: 0 3rem 0 3rem;
+  padding-bottom: 3rem;
+}
+.recommended-container::-webkit-scrollbar {
+  display: none;
+}
+.reco-card {
+  flex: 0 0 auto;
+  width: 369px;
+  height: 323px;
+  margin: 1rem 2rem 0 0;
+  background-color: white;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease-in-out;
+}
+.reco-card:hover{
+  transform: translateY(-15px);
+}
+.reco-image img {
+  width: 369px;
+}
+.reco-info {
+  height: 152px;
+  padding: 0px 8px 12px 8px;
+}
+.reco-info .reco-title .fa-heart {
+  font-size: 30px;
+  margin-left: 9rem;
+}
+.reco-info .reco-title .mount-heart {
+  margin-left: 11.4rem;
+}
+.reco-title {
+  margin-bottom: 1rem;
+  font-size: 20px;
+}
+.descr {
+  font-size: 12px;
+  margin-top: -15px;
+  color: var(--cards-p-color);
+  width: 356px;
+  height: 57px;
+}
+.second-updates {
+  margin: 19px 0 0 20px;
+}
+.second-updates .third h5,
+.second-updates .second h5 {
+  margin: -23px 0 0 38px;
+}
+.second-updates .first h5 {
+  margin: -23px 0 0 33px;
+}
+.second-updates .first,
+.second-updates .second,
+.second-updates .third {
+  margin: 0 13px 0px -10px;
+  width: 115px;
+  height: 32px;
+  border-radius: 20px;
+  font-size: 11px;
+}
+.reco-info .descr a {
+  text-decoration: underline;
+  color: var(--cards-p-color);
+}
+.pre-btn,
+.nxt-btn {
+  border: none;
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  top: 14rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin:0 8px 0 8px;
+  z-index: 8;
+  border-radius: 50px;
+  background-color: var(--main-color);
+}
+.pre-btn {
+  left: 0;
+  transform: rotate(180deg);
+}
+.nxt-btn {
+  right: 0;
+}
+
+/*====================== useful-info section ==================*/
