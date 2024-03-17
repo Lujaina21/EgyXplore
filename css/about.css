@@ -1,0 +1,197 @@
+/*==================== GOOGLE FONTS ====================*/
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+:root {
+  /*========= Colors =============*/
+  --main-color: #8b5843;
+  --text-color: #333333;
+  --second-main-color: #f6dcad;
+  --explore-more-color: #774936;
+  --border-color: #533528;
+  --title-color: #ffffff;
+  --inactive-line-color: #b9b9b9;
+  --cards-p-color: #5b5b5b;
+  --calend-background: #b3c4d4;
+  --review-background: #ffebc7;
+  --views-background: #ffd8da;
+  --input-color: #333333;
+  --input-background-color: #e3e3e3;
+  --icon-back-color: #e7bc91;
+  --shadow: #40404040;
+  --calend-txt-color: #03014a;
+  /*========== Font weight ==========*/
+  --font-medium: 500;
+  --font-semi-bold: 600;
+  --font-bold: 700;
+}
+/*==================== Body ====================*/
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+html {
+  scroll-behavior: smooth;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: var(--border-color);
+}
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+/*================== abt section ====================*/
+.abt-top {
+  margin: -6rem 0 0 6rem;
+  position: absolute;
+  font-size: 33px;
+}
+.abt-top > a > i {
+  transition: all 0.3s ease-in-out;
+}
+.abt-top > a > i:hover {
+  transform: translateX(-15px);
+}
+.abt-left {
+  margin: 8rem 34rem 0 6rem;
+}
+.abt-left .abt-title > h1 {
+  font-size: 80px;
+}
+.abt-left .abt-title > h3 {
+  font-size: 50px;
+  margin-bottom: 2rem;
+}
+.abt-left > p {
+  font-size: 27px;
+  width: 543px;
+  height: 410px;
+  color: var(--cards-p-color);
+}
+.abt-imgs {
+  margin: -43rem 35px 0 41rem;
+}
+.abt-imgs > img:nth-child(1),
+.abt-imgs > img:nth-child(2) {
+  margin-bottom: 15px;
+}
+.abt-imgs > img:nth-child(1),
+.abt-imgs > img:nth-child(3) {
+  margin-right: 15px;
+}
+/*============= responsive (about section) ============= */
+@media (max-width: 1024px) {
+  .abt-imgs {
+    margin-left: 9rem;
+    margin-top: -1rem;
+  }
+  .abt-title {
+    width: 40rem;
+  }
+  .abt-left {
+    margin-left: 10rem;
+  }
+  .abt-left > p {
+    font-size: 30px;
+    width: 46rem;
+  }
+}
+
+@media (max-width: 1342px) {
+  .abt-imgs {
+    margin-left: 40rem;
+    margin-top: -40rem;
+  }
+  .abt-imgs > img:nth-child(1),
+  .abt-imgs > img:nth-child(2),
+  .abt-imgs > img:nth-child(3),
+  .abt-imgs > img:nth-child(4) {
+    width: 17rem;
+  }
+}
+
+@media (max-width: 1200px) {
+  .abt-imgs {
+    margin-left: 10rem;
+    margin-top: -9rem;
+  }
+  .abt-imgs > img:nth-child(1),
+  .abt-imgs > img:nth-child(2),
+  .abt-imgs > img:nth-child(3),
+  .abt-imgs > img:nth-child(4) {
+    width: 17rem;
+  }
+  .abt-title {
+    width: 46rem;
+  }
+  .abt-left > p {
+    font-size: 23px;
+    width: 36rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .abt-left {
+    margin-left: 4rem;
+  }
+  .abt-title {
+    width: 40rem;
+  }
+  .abt-imgs {
+    margin-left: 5rem;
+    margin-top: -5rem;
+  }
+  .abt-imgs > img:nth-child(1),
+  .abt-imgs > img:nth-child(2),
+  .abt-imgs > img:nth-child(3),
+  .abt-imgs > img:nth-child(4) {
+    width: 16rem;
+  }
+  .abt-imgs > img:nth-child(1),
+  .abt-imgs > img:nth-child(3) {
+    margin-right: 1rem;
+  }
+  .abt-left > p {
+    font-size: 25px;
+    width: 33rem;
+  }
+}
+
+@media (max-width: 642px) {
+  .abt-imgs {
+    margin-left: 1rem;
+  }
+}
+
+@media (max-width: 525px) {
+  .abt-imgs {
+    margin-left: 2rem;
+    margin-top: 5rem;
+  }
+  .abt-imgs > img:nth-child(1),
+  .abt-imgs > img:nth-child(2),
+  .abt-imgs > img:nth-child(3),
+  .abt-imgs > img:nth-child(4) {
+    width: 13rem;
+  }
+  .abt-imgs > img:nth-child(1),
+  .abt-imgs > img:nth-child(3) {
+    margin-right: 1rem;
+  }
+  .abt-left > h1 {
+    font-size: 80px;
+  }
+  .abt-left > h3 {
+    font-size: 50px;
+  }
+  .abt-left > p {
+    font-size: 25px;
+    width: 23rem;
+  }
+}
+/*=========================================*/
