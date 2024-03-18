@@ -1,0 +1,232 @@
+/*==================== GOOGLE FONTS ====================*/
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+:root {
+  /*========= Colors =============*/
+  --main-color: #8b5843;
+  --text-color: #333333;
+  --second-main-color: #f6dcad;
+  --explore-more-color: #774936;
+  --border-color: #533528;
+  --title-color: #ffffff;
+  --inactive-line-color: #b9b9b9;
+  --cards-p-color: #5b5b5b;
+  --calend-background: #b3c4d4;
+  --review-background: #ffebc7;
+  --views-background: #ffd8da;
+  --input-color: #333333;
+  --input-background-color: #e3e3e3;
+  --icon-back-color: #e7bc91;
+  --shadow: #40404040;
+  --calend-txt-color: #03014a;
+  /*========== Font weight ==========*/
+  --font-medium: 500;
+  --font-semi-bold: 600;
+  --font-bold: 700;
+}
+/*==================== Body ====================*/
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+html {
+  scroll-behavior: smooth;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+body {
+  font-family: "Poppins", sans-serif;
+  height: 100vh;
+}
+
+/*================== contact section ====================*/
+.abt-top {
+  margin: -6rem 0 0 6rem;
+  position: absolute;
+  font-size: 33px;
+}
+.abt-top > a > i {
+  transition: all 0.3s ease-in-out;
+  color: var(--border-color);
+}
+.abt-top > a > i:hover {
+  transform: translateX(-15px);
+}
+.contact-left {
+  margin: 8rem 0 0 6rem;
+}
+.contact-txt {
+  margin-bottom: 3rem;
+}
+.contact-txt > h1 {
+  font-size: 80px;
+  font-weight: var(--font-semi-bold);
+}
+.contact-txt > p {
+  font-size: 25px;
+  color: var(--cards-p-color);
+  width: 552px;
+  height: 60px;
+}
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  width: 461px;
+}
+.contact-form input {
+  margin-bottom: 37px;
+  font-size: 25px;
+  color: #666666;
+  border: none;
+  border-bottom: 2px solid #666666;
+  padding: 8px;
+  outline: none;
+}
+.contact-form > a {
+  background-color: var(--border-color);
+  color: white;
+  text-align: center;
+  border-radius: 10px;
+  height: 74px;
+  font-size: 25px;
+  padding: 15px;
+  transition: all 0.3s ease-in-out;
+}
+.contact-form > a:hover {
+  opacity: 80%;
+}
+.contact-img > img {
+  margin: -43rem 0 0 48.3rem;
+}
+/* =================== Contact Responsive =================== */
+@media (max-width: 1097px) {
+  .abt-top {
+    margin: -6rem 0 0 5rem;
+  }
+  .contact-left {
+    margin: 8rem 0 0 5rem;
+  }
+  .contact-img > img {
+    width: 29rem;
+    height: 45rem;
+    margin: -41rem 0 0 39rem;
+    position: absolute;
+  }
+  .contact-txt > h1 {
+    font-size: 4rem;
+  }
+  .contact-txt > p {
+    width: 31rem;
+  }
+}
+@media (max-width: 900px) {
+  .abt-top {
+    margin: -56rem 0 0 3rem;
+    z-index: 100;
+    background-color: white;
+    border-radius: 100%;
+    padding: 18px;
+  }
+  .contact-left {
+    margin: 58rem 0 0 12rem;
+  }
+  .contact-img > img {
+    width: 56rem;
+    height: 56rem;
+    margin: -91rem 0 0 0;
+    position: absolute;
+  }
+  .contact-txt > h1 {
+    font-size: 4rem;
+  }
+  .contact-txt > p {
+    width: 31rem;
+    font-size: 21px;
+  }
+}
+@media (max-width: 800px) {
+  .abt-top {
+    margin: -48rem 0 0 3rem;
+    z-index: 100;
+    background-color: white;
+    border-radius: 100%;
+    padding: 18px;
+  }
+  .contact-left {
+    margin: 50rem 0 0 9rem;
+  }
+  .contact-img > img {
+    margin-left: 0rem;
+    width: 48rem;
+    height: 48rem;
+    margin-top: -83rem;
+    position: absolute;
+  }
+  .contact-txt > h1 {
+    font-size: 4rem;
+  }
+  .contact-txt > p {
+    width: 31rem;
+    font-size: 21px;
+  }
+}
+@media (max-width: 620px) {
+  .abt-top {
+    margin: -36rem 0 0 2rem;
+    z-index: 100;
+    background-color: white;
+    border-radius: 100%;
+    padding: 18px;
+  }
+  .contact-left {
+    margin: 38rem 0 0 3rem;
+  }
+  .contact-img > img {
+    width: 38rem;
+    height: 38rem;
+    margin: -73rem 0 0 0;
+    position: absolute;
+  }
+  .contact-txt > h1 {
+    font-size: 4rem;
+  }
+  .contact-txt > p {
+    width: 31rem;
+    font-size: 21px;
+  }
+}
+
+@media (max-width: 530px) {
+  .abt-top {
+    margin: -39rem 0 0 2rem;
+    z-index: 100;
+    background-color: white;
+    border-radius: 100%;
+    padding: 18px;
+  }
+  .contact-left {
+    margin-top: 42rem;
+    margin-left: 2rem;
+  }
+  .contact-img > img {
+    width: 33rem;
+    height: 37rem;
+    margin: -73rem 0 0 0;
+    position: absolute;
+  }
+  .contact-txt > h1 {
+    font-size: 63px;
+    margin-top: -2rem;
+  }
+  .contact-txt > p {
+    font-size: 22px;
+    width: 29rem;
+  }
+}
