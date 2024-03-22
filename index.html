@@ -22,43 +22,42 @@
 
   <body>
     <!--============= Nav ================ -->
-    <header id="home" class="home">
-      <nav>
-        <div class="nav-center">
-          <div class="nav-header">
-            <img src="imgs/EgyXplore.png" alt="Logo" class="nav-logo" />
-          </div>
-          <!--links-->
-          <ul class="nav-links">
-            <li class="navitem">
-              <a href="#banner">Home</a>
-            </li>
-            <li class="navitem">
-              <a href="#destinations">Destinations</a>
-            </li>
-            <li class="navitem">
-              <a href="about.html">About Us</a>
-            </li>
-            <li class="navitem">
-              <a href="#testimonial">Testimonial</a>
-            </li>
-            <li class="navitem">
-              <a href="contact.html">Contact-Us</a>
-            </li>
-            <li class="navitem">
-              <a href="#interests">Interests</a>
-            </li>
-          </ul>
-          <div class="navBtns">
-            <select name="language" id="language">
-              <option value="eng">EN</option>
-              <option value="ar">AR</option>
-            </select>
-            <a href="signin.html" class="nav-signin">SIGN IN</a>
-            <a href="createnewaccount.html" class="nav-signup">SIGN UP</a>
-          </div>
+    <header>
+      <div class="navbar">
+        <div class="nav-logo">
+          <a href="index.html">
+            <img src="imgs/EgyXplore.png" alt="Logo" />
+          </a>
         </div>
-      </nav>
+        <ul class="links">
+          <li><a href="#banner">Home</a></li>
+          <li><a href="#destinations">Destinations</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="#testimonial">Testimonial</a></li>
+          <li><a href="contact.html">Contact-Us</a></li>
+          <li><a href="#interests">Interests</a></li>
+        </ul>
+
+        <div class="navBtns">
+          <select name="language" id="language">
+            <option value="eng">EN</option>
+            <option value="ar">AR</option>
+          </select>
+          <a href="signin.html" class="nav-signin">SIGN IN</a>
+          <a href="createnewaccount.html" class="nav-signup">SIGN UP</a>
+        </div>
+
+        <div class="toggle_btn"><i class="fa-solid fa-bars"></i></div>
+      </div>
+
+      <div class="dropdown_menu">
+        <li><a href="#banner">Home</a></li>
+        <li><a href="#destinations">Destinations</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="#testimonial">Testimonial</a></li>
+        <li><a href="contact.html">Contact-Us</a></li>
+        <li><a href="#interests">Interests</a></li>
+      </div>
     </header>
     <!--============= Banner ================ -->
     <section class="banner_section" id="banner">
@@ -1270,7 +1269,6 @@
       </div>
     </div>
     <!--========= JS Files ========= -->
-    <!-- <script src="https://kit.fontawesome.com/891a743c44.js" crossorigin="anonymous"></script> -->
     <script src="js/all.min.js"></script>
     <script src="js/main.js"></script>
     <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
