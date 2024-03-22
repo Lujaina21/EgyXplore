@@ -84,10 +84,6 @@ a {
 body {
   font-family: "Poppins", sans-serif;
   height: 150vh;
-  background-image: url("Group.png");
-  background-size: cover;
-  background-attachment: scroll;
-  background-repeat: no-repeat;
 }
 /*==================== Navbar ====================*/
 header {
