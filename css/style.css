@@ -90,33 +90,43 @@ body {
   background-repeat: no-repeat;
 }
 /*==================== Navbar ====================*/
-.nav-logo {
-  margin-left: 3rem;
-  margin-top: 37px;
-}
-.nav-links {
-  display: flex;
-  margin-top: -2rem;
-  align-items: center;
-  list-style: none;
-  padding-left: 17rem;
-  padding-right: 15rem;
-  padding-bottom: 9px;
-}
-.navitem {
-  margin-left: 28px;
-  font-size: 16px;
-  font-weight: 500;
+header {
   position: relative;
-  transition: all 0.3s ease-in-out 0s;
+  padding: 0 2rem;
+  height: 100%;
+  width: 100%;
+  background-image: url(/imgs/Group.png);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
-.navitem > a {
+
+.navbar {
+  width: 100%;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navbar .links {
+  display: flex;
+  gap: 2rem;
+  font-weight: 500;
+  margin-left: -7rem;
+}
+
+.navbar .links li a {
+  position: relative;
+}
+
+.navbar .links li a {
   color: #ffffff;
 }
-.navitem > a:hover {
+.navbar .links li a:hover {
   color: black;
 }
-.navitem > a::before {
+
+.navbar .links li a::before {
   content: "";
   position: absolute;
   width: 45%;
@@ -128,47 +138,36 @@ body {
   transform: scaleX(0);
   transition: all 0.3s ease-in-out 0s;
 }
-.navitem > a:hover:before {
+.navbar .links li a:hover:before {
   visibility: visible;
   transform: scaleX(1.1);
 }
 .navBtns {
   display: flex;
-  padding-bottom: 9px;
-  margin-left: 67rem;
-  margin-top: -34px;
+  margin-left: -19rem;
 }
 .navBtns > select {
-  margin-left: -44px;
   background-color: #e6e6e6;
   opacity: 40%;
   font-size: 13px;
   height: 19px;
-  margin-top: 6px;
   font-weight: var(--font-bold);
   border: none;
   border-radius: 4px;
-}
-.navBtns > select > option {
-  background-color: #e6e6e6;
-  opacity: 40%;
-  font-size: 13px;
-  font-weight: var(--font-bold);
+  outline: none;
+  margin: 7px 1rem 0 11rem;
 }
 .navBtns > a {
   color: black;
   font-weight: var(--font-semi-bold);
-  font-size: 18px;
-  padding: 2px 21px;
+  font-size: 17px;
 }
 .nav-signin,
 .nav-signup {
   background-color: #ffffff;
   border-radius: 4px;
+  padding: 4px 12px;
   transition: all 0.3 ease-in-out 0s;
-}
-.nav-signin {
-  margin-left: 20px;
 }
 .nav-signup {
   margin-left: 12px;
@@ -177,12 +176,105 @@ body {
 .nav-signup:hover {
   opacity: 70%;
 }
+.navbar .toggle_btn {
+  color: white;
+  font-size: 1.5rem;
+  cursor: pointer;
+  display: none;
+  transition: all 0.3s ease;
+}
+
+.navbar .toggle_btn:hover {
+  font-size: 2rem;
+}
+
+/********* DROPDOWN MENU *********/
+.dropdown_menu {
+  position: absolute;
+  right: 2rem;
+  top: 100px;
+  width: 300px;
+  height: 0;
+  background: rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(15px);
+  border-radius: 10px;
+  overflow: hidden;
+  transition: height 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.dropdown_menu.open {
+  position: absolute;
+  height: 244px;
+  z-index: 1;
+}
+
+.dropdown_menu li {
+  padding: 0.7rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dropdown_menu li a {
+  position: relative;
+  color: #ffffff;
+}
+
+.dropdown_menu li a::before {
+  content: "";
+  position: absolute;
+  width: 45%;
+  height: 3px;
+  bottom: -2px;
+  left: 15px;
+  background-color: white;
+  visibility: hidden;
+  transform: scaleX(0);
+  transition: all 0.3s ease-in-out 0s;
+}
+.dropdown_menu li a:hover:before {
+  visibility: visible;
+  transform: scaleX(1.1);
+}
+
+/****** Responsive Nav ******/
+@media (max-width: 992px) {
+  .navbar .links {
+    display: none;
+  }
+  .navBtns > a {
+    display: none;
+  }
+  .navbar .toggle_btn {
+    display: block;
+  }
+  .navbar select {
+    display: none;
+  }
+  .profile {
+    display: none;
+  }
+}
+@media (max-width: 576px) {
+  .dropdown_menu {
+    left: 2rem;
+    width: unset;
+  }
+  .navbar select {
+    display: none;
+  }
+  .navBtns > a {
+    display: none;
+  }
+  .profile {
+    display: none;
+  }
+}
 /*==================== Banner ====================*/
 .texts {
   color: white;
   line-height: 2;
-  margin-left: 5rem;
-  margin-top: 6rem;
+  margin: -48rem 0 0 5rem;
 }
 .texts > h4 {
   position: relative;
@@ -204,16 +296,18 @@ body {
 .texts > h3 {
   font-size: 50px;
   font-weight: var(--font-semi-bold);
+  position: relative;
 }
 .texts > h1 {
   font-size: 150px;
   margin-top: -6rem;
+  position: relative;
   font-weight: var(--font-semi-bold);
 }
 .social-icons {
-  margin-left: 74rem;
-  margin-top: -19rem;
+  margin: -19rem 0 0 74rem;
   font-size: 35px;
+  position: relative;
 }
 .social-icons > a {
   color: white;
