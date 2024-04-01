@@ -266,7 +266,7 @@ header {
     margin-left: 16rem;
   }
 }
-@media (max-width: 576px) {
+@media (max-width: 676px) {
   .mid-txts {
     margin-left: 2rem;
   }
