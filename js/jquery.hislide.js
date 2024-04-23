@@ -1,15 +1,15 @@
 (function ($) {
   // Define slide function
-  var slide = function (ele, options) {
+  var slide = function (slide, options) {
     // Convert DOM element to a jQuery obj
-    var $ele = $(ele);
+    var $slideObj = $(slide);
     // Default
-    var setting = {
+    var default_setting = {
       speed: 1000, // animation duration (ms)
       interval: 2000, // Interval between slide transitions (ms)
     };
     // Merge default options with user-defined options
-    $.extend(true, setting, options);
+    $.extend(true, default_setting, options);
     //CSS properties for each slide
     var states = [
       { $zIndex: 1, width: 120, height: 150, top: 69, left: 134, $opacity: 1 },
@@ -21,22 +21,22 @@
       { $zIndex: 1, width: 120, height: 150, top: 69, left: 500, $opacity: 1 },
     ];
 
-    // Select all <li> elements within the slider container
-    var $lis = $ele.find("li");
+    // Select all <li> elements in slider container
+    var $li_elements = $slideObj.find("li");
     // Initialize the timer
     var timer = null;
 
     // Add click event handler for NEXT btn
-    $ele.find(".hi-next").on("click", function () {
+    $slideObj.find(".hi-next").on("click", function () {
       next();
     });
     // Add click event handler for PREV btn
-    $ele.find(".hi-prev").on("click", function () {
+    $slideObj.find(".hi-prev").on("click", function () {
       states.push(states.shift());
       move();
     });
     // Pause autoplay on mouseenter and resume on mouseleave
-    $ele
+    $slideObj
       .on("mouseenter", function () {
         clearInterval(timer);
         timer = null;
@@ -49,12 +49,12 @@
     autoPlay();
     // Function to transition between slides
     function move() {
-      $lis.each(function (index, element) {
+      $li_elements.each(function (index, element) {
         var state = states[index];
         $(element)
           .css("zIndex", state.$zIndex)
           .finish()
-          .animate(state, setting.speed)
+          .animate(state, default_setting.speed)
           .find("img")
           .css("opacity", state.$opacity);
       });
@@ -65,15 +65,15 @@
       move();
     }
     function autoPlay() {
-      timer = setInterval(next, setting.interval);
+      timer = setInterval(next, default_setting.interval);
     }
   };
   // Define hiSlide jQuery plugin
   $.fn.hiSlide = function (options) {
     // Iterate over each element in the jQuery collection
-    $(this).each(function (index, ele) {
+    $(this).each(function (index, slideObj) {
       // Call slide fn on each element
-      slide(ele, options);
+      slide(slideObj, options);
     });
     // Return jQuery obj for method chaining
     return this;
