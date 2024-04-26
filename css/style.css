@@ -986,11 +986,28 @@ header {
   border-radius: 5px;
   width: 100px;
   height: 100px;
-  margin-left: 26px;
   font-size: 16px;
   font-weight: var(--font-semi-bold);
   transition: 0.2s all ease-in-out;
+  position: absolute;
 }
+
+.desertTab {
+  margin-left: 2rem;
+}
+.landmarksTab {
+  margin-left: 10rem;
+}
+.ecoTab {
+  margin-left: 18rem;
+}
+.cultureTab {
+  margin-left: 26rem;
+}
+.beachyTab {
+  margin-left: 34rem;
+}
+
 .mytabs label:hover,
 .mytabs input[type="radio"]:checked + label {
   background: var(--main-color);
@@ -1030,19 +1047,60 @@ header {
 .mytabs .tab {
   order: 1;
   display: none;
-  margin-top: 16rem;
+  margin: 16rem 0 0 38rem;
 }
 .mytabs input[type="radio"]:checked + label + .tab {
   display: block;
 }
 
 @media (max-width: 1056px) {
- 
+  .tab .second-img {
+    margin: 33rem 0 0 -35rem;
+  }
 }
 @media (max-width: 992px) {
-
+  .interest-title > h3 {
+    width: 25rem;
+    text-align: center;
+  }
+  .cultureTab {
+    margin: 8rem 0 0 6rem;
+  }
+  .beachyTab {
+    margin: 8rem 0 0 15rem;
+  }
+  .tab .first-img {
+    margin: 5rem 0 0 -4rem;
+  }
+  .tab .second-img {
+    margin: 37rem 0 0 -29rem;
+  }
 }
 @media (max-width: 660px) {
+  .interest-title > h3 {
+    margin-left: -3rem;
+  }
+  .desertTab {
+    margin-left: -1rem;
+  }
+  .landmarksTab {
+    margin-left: 7rem;
+  }
+  .ecoTab {
+    margin-left: 15rem;
+  }
+  .cultureTab {
+    margin-left: 2rem;
+  }
+  .beachyTab {
+    margin-left: 11rem;
+  }
+  .tab .first-img {
+    margin: 5rem 0 0 -9rem;
+  }
+  .tab .second-img {
+    margin: 40rem 0 0 -28rem;
+  }
 }
 /*====================== recommended section ==================*/
 .recommended-section {
