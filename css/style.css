@@ -906,14 +906,53 @@ header {
   margin: 7px 0 0 10px;
 }
 
-@media(max-width:1056px){
-
+@media (max-width: 1056px) {
+  .ss2 {
+    margin-top: 24rem;
+  }
+  .ss2-left > h4,
+  .ss2-left > p {
+    width: 50rem;
+  }
+  .ss2-left > a {
+    margin: 4rem 0 0 14rem;
+  }
+  .ss2-right {
+    margin: 41rem 0 0 7rem;
+  }
 }
-@media(max-width:992px){
-
+@media (max-width: 992px) {
+  .ss2-left > h4,
+  .ss2-left > p {
+    width: 40rem;
+  }
+  .ss2-left > a {
+    margin-left: 11rem;
+  }
+  .ss2-right {
+    margin: 41rem 0 0 5rem;
+  }
 }
-@media(max-width:660px){
-
+@media (max-width: 660px) {
+  .ss2-left > h4,
+  .ss2-left > p {
+    width: 21rem;
+  }
+  .ss2-left > a {
+    margin-left: 3rem;
+  }
+  .ss2-right {
+    margin-left: 3rem;
+  }
+  .ss2-right .travel-boxes {
+    margin-top: -23rem;
+  }
+  .ss2-right .travel-boxes .travel:nth-child(2) {
+    margin: 5rem 0 0 0;
+  }
+  .ss2-right .travel-boxes .travel:nth-child(3) {
+    margin-left: 0;
+  }
 }
 /*==================== Interests ====================*/
 .interests-section {
@@ -956,7 +995,6 @@ header {
 .mytabs input[type="radio"]:checked + label {
   background: var(--main-color);
   box-shadow: 5px 5px 4px 0 var(--shadow);
-
 }
 .interests-imgs {
   display: flex;
@@ -966,16 +1004,16 @@ header {
 .second-img > h4 {
   margin: 1rem 0 1rem 10rem;
 }
-.culture-imgs .first-img >h4{
+.culture-imgs .first-img > h4 {
   margin-left: 0rem;
 }
-.culture-imgs .second-img >h4{
+.culture-imgs .second-img > h4 {
   margin-left: 6rem;
 }
-.eco-imgs .first-img >h4{
+.eco-imgs .first-img > h4 {
   margin-left: 11rem;
 }
-.eco-imgs .second-img >h4{
+.eco-imgs .second-img > h4 {
   margin-left: 6rem;
 }
 .first-img > p,
@@ -998,6 +1036,14 @@ header {
   display: block;
 }
 
+@media (max-width: 1056px) {
+ 
+}
+@media (max-width: 992px) {
+
+}
+@media (max-width: 660px) {
+}
 /*====================== recommended section ==================*/
 .recommended-section {
   margin-top: -13rem;
@@ -1105,7 +1151,7 @@ header {
 }
 
 /*==================== useful information section ====================*/
-.useful-information-section .container .speachial-heading h1{
+.useful-information-section .container .speachial-heading h1 {
   margin-top: 5rem;
 }
 .useful-information-section .main-section {
