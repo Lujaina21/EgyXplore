@@ -947,7 +947,6 @@ header {
   border-radius: 5px;
   width: 100px;
   height: 100px;
-  box-shadow: 5px 5px 4px 0 var(--shadow);
   margin-left: 26px;
   font-size: 16px;
   font-weight: var(--font-semi-bold);
@@ -956,6 +955,8 @@ header {
 .mytabs label:hover,
 .mytabs input[type="radio"]:checked + label {
   background: var(--main-color);
+  box-shadow: 5px 5px 4px 0 var(--shadow);
+
 }
 .interests-imgs {
   display: flex;
@@ -964,6 +965,18 @@ header {
 .first-img > h4,
 .second-img > h4 {
   margin: 1rem 0 1rem 10rem;
+}
+.culture-imgs .first-img >h4{
+  margin-left: 0rem;
+}
+.culture-imgs .second-img >h4{
+  margin-left: 6rem;
+}
+.eco-imgs .first-img >h4{
+  margin-left: 11rem;
+}
+.eco-imgs .second-img >h4{
+  margin-left: 6rem;
 }
 .first-img > p,
 .second-img > p {
