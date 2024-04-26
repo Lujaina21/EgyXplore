@@ -1,13 +1,13 @@
 "use restrict";
 /*============== Recommended section slider ==============*/
-const productContainers = [
+const recommendContainer = [
   ...document.querySelectorAll(".recommended-container"),
 ];
 const nxtBtn = [...document.querySelectorAll(".nxt-btn")];
 const preBtn = [...document.querySelectorAll(".pre-btn")];
 
-productContainers.forEach((item, i) => {
-  
+recommendContainer.forEach((item, i) => {
+
   nxtBtn[i].addEventListener("click", () => {
     item.scrollLeft += 382;
   });
