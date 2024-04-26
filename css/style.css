@@ -1011,7 +1011,7 @@ header {
 .reco-card {
   flex: 0 0 auto;
   width: 369px;
-  height: 323px;
+  height: 394px;
   margin: 1rem 2rem 0 0;
   background-color: white;
   box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.1);
@@ -1092,6 +1092,9 @@ header {
 }
 
 /*==================== useful information section ====================*/
+.useful-information-section .container .speachial-heading h1{
+  margin-top: 5rem;
+}
 .useful-information-section .main-section {
   display: flex;
   flex-direction: row;
