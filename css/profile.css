@@ -1,0 +1,307 @@
+/*==================== GOOGLE FONTS ====================*/
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+:root {
+  /*========= Colors =============*/
+  --main-color: #8b5843;
+  --text-color: #333333;
+  --second-main-color: #f6dcad;
+  --explore-more-color: #774936;
+  --border-color: #533528;
+  --title-color: #ffffff;
+  --inactive-line-color: #b9b9b9;
+  --cards-p-color: #5b5b5b;
+  --calend-background: #b3c4d4;
+  --review-background: #ffebc7;
+  --views-background: #ffd8da;
+  --input-color: #333333;
+  --input-background-color: #e3e3e3;
+  --icon-back-color: #e7bc91;
+  --shadow: #40404040;
+  --calend-txt-color: #03014a;
+  --line-color: #c7c7c7;
+  --profile-user: #e3be9f;
+  --border-input: #aaaaaa;
+  --border-fill: #f4f4f4;
+  /*========== Font weight ==========*/
+  --font-medium: 500;
+  --font-semi-bold: 600;
+  --font-bold: 700;
+}
+/*==================== Body ====================*/
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+html {
+  font-family: "Poppins", sans-serif;
+  scroll-behavior: smooth;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+body {
+  font-family: "Poppins", sans-serif;
+  height: 150vh;
+}
+/*==================== Navbar ====================*/
+.navbar {
+  width: 100%;
+  height: 55px;
+  display: flex;
+}
+.toggle_btn {
+  position: absolute;
+  margin: 8px 0 0 4rem;
+  font-size: 25px;
+}
+.home-btn {
+  margin: 7px 0 0 62rem;
+  position: absolute;
+  font-size: 25px;
+  color: black;
+}
+.user {
+  margin-left: 67rem;
+}
+.user > h4 {
+  margin: -2.5rem 0 0 4rem;
+  font-size: 20px;
+}
+
+/*==================== vertical line ====================*/
+.vertical-line {
+  position: relative;
+  margin-left: 7rem;
+}
+.vertical-line::before {
+  content: "";
+  border-left: 1px solid var(--line-color);
+  height: 42rem;
+  display: block;
+}
+
+/*==================== Banner: Left section ====================*/
+.tabs-title {
+  margin: 2rem 0 0 53px;
+}
+.mytabs label .option > img {
+  margin-left: -10rem;
+}
+.mytabs label .option > p {
+  margin-top: -33px;
+}
+.user-tab {
+  margin-top: 9rem;
+}
+.fav-tab {
+  margin-top: 16rem;
+}
+.review-tab {
+  margin-top: 23rem;
+}
+.setting-tab {
+  margin-top: 30rem;
+}
+.notif-tab {
+  margin-top: 37rem;
+}
+.user-tab,
+.review-tab,
+.fav-tab,
+.notif-tab,
+.setting-tab {
+  border-top-right-radius: 50px;
+  border-bottom-right-radius: 50px;
+  transition: 0.2s all ease-in-out;
+  position: absolute;
+  width: 16rem;
+  height: 60px;
+  padding: 15px 10px;
+  text-align: center;
+}
+.mytabs {
+  display: flex;
+}
+.mytabs input[type="radio"] {
+  display: none;
+}
+.user-tab:hover,
+.review-tab:hover,
+.fav-tab:hover,
+.notif-tab:hover,
+.setting-tab:hover,
+.mytabs input[type="radio"]:checked + label {
+  background: var(--profile-user);
+}
+.mytabs .tab {
+  order: 1;
+  display: none;
+  margin-left: 8rem;
+}
+.mytabs input[type="radio"]:checked + label + .tab {
+  display: block;
+}
+
+/*==================== Banner: Right section ====================*/
+/****************** user info tab ******************/
+.first-tab .inputs {
+  margin-top: 10rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+}
+.first-tab .inputs input {
+  outline: none;
+  width: 337px;
+  height: 60px;
+  border: 1px solid var(--border-input);
+  background-color: var(--border-fill);
+  border-radius: 5px;
+  font-size: 20px;
+  text-align: center;
+}
+.first-tab .inputs label {
+  position: absolute;
+  font-size: 16px;
+  font-weight: var(--font-medium);
+}
+
+.first-tab .inputs .lname {
+  margin-top: 1.8rem;
+}
+.first-tab .inputs .email,
+.first-tab .inputs .pass {
+  margin-top: 5rem;
+}
+.first-tab .inputs .lname,
+.first-tab .inputs .pass {
+  margin-left: 3rem;
+}
+
+.first-tab .inputs .fname > label {
+  margin-top: -12px;
+}
+.first-tab .inputs .lname > label,
+.first-tab .inputs .pass > label {
+  margin-top: -44px;
+}
+.first-tab .inputs .email > label {
+  margin-top: -42px;
+}
+.first-tab .inputs .fname > input {
+  margin-top: 2rem;
+}
+
+.save-btn {
+  margin: 9rem 0 0 20rem;
+}
+.save {
+  border-radius: 5px;
+  width: 270px;
+  height: 60px;
+  text-align: center;
+  background-color: var(--border-color);
+  box-shadow: 5px 5px 4px 0 rgba(0, 0, 0, 0.25);
+  color: white;
+  padding: 14px 52px;
+  cursor: pointer;
+}
+
+/****************** favourites tab ******************/
+
+/****************** reviews tab ******************/
+.popup-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.25);
+}
+.popup {
+  position: absolute;
+  width: 41rem;
+  height: 31rem;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #fff;
+  padding: 13px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+.rev-msg > textarea {
+  margin-bottom: 2rem;
+  height: 12rem;
+  resize: none;
+  padding: 40px 10px 10px 10px;
+}
+.rev-msg > label {
+  margin-top: -2rem;
+  position: absolute;
+}
+.rev-title > label {
+  margin-top: 1rem;
+  position: absolute;
+}
+.rev-title > input {
+  margin: 3rem 0 4rem 0;
+  padding: 10px;
+}
+.rev-title > input,
+.rev-msg > textarea {
+  width: 100%;
+  border: 1px solid #737373;
+  outline: none;
+  border-radius: 4px;
+}
+.popup-btns {
+  margin: 13rem 0 0 30rem;
+}
+.popup-content a {
+  color: black;
+  padding: 14px 46px;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+}
+.popup-content a:nth-child(1) {
+  border: 1px solid #dddddd;
+  background-color: white;
+}
+.popup-content a:nth-child(2) {
+  background-color: var(--explore-more-color);
+  margin: -14px 0 0 -18rem;
+}
+.msg-icons {
+  margin-top: -14rem;
+  margin-left: 1rem;
+}
+.bold,
+.italic,
+.underline,
+.strikethrough,
+.list,
+.link,
+.unlink {
+  margin-left: 10px;
+}
+.horiz-line{
+    position: relative;
+
+}
+.horiz-line::before {
+    content: "";
+    border-bottom: 1px solid black;
+    width: 100%;
+    display: block;
+  }
+
+  
