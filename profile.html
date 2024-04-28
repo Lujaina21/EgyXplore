@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EgyXplore</title>
+    <!--======================= CSS styling file ============================= -->
+    <link rel="stylesheet" href="css/profile.css" />
+    <!--======================= Icons file ============================= -->
+    <link rel="stylesheet" href="css/all.min.css" />
+    <!--======================= Logo Icon ============================= -->
+    <link rel="shortcut icon" href="imgs/camel.png" />
+    <!--======================= Font Family ============================= -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <!--============= Nav ================ -->
+    <header>
+      <div class="navbar">
+        <div class="toggle_btn"><i class="fa-solid fa-bars"></i></div>
+        <a class="home-btn" href="index.html"
+          ><i class="fa-solid fa-house"></i
+        ></a>
+        <div class="user">
+          <img src="imgs/pfp.png" />
+          <h4>Sarah Tancredi</h4>
+        </div>
+      </div>
+      <hr />
+      <!--======================= banner: left section =======================-->
+    </header>
+    <div class="mytabs">
+      <h2 class="tabs-title">User Profile</h2>
+      <!-- -------- user info ---------- -->
+      <input type="radio" id="userInfo" name="profile-tabs" />
+      <label for="userInfo" class="user-tab">
+        <div class="option">
+          <img src="imgs/profile-user.png" alt="" />
+          <p class="user_p">User Info</p>
+        </div>
+      </label>
+
+      <!---------- User info tab ----------->
+      <div class="tab">
+        <div class="first-tab">
+          <div class="inputs">
+            <div class="fname">
+              <label for="fname">First Name</label>
+              <input id="fname" value="Sarah" type="text" readonly />
+            </div>
+            <div class="lname">
+              <label for="lname">Last Name</label>
+              <input id="lname" value="Tancredi" type="text" readonly />
+            </div>
+            <div class="email">
+              <label for="email">Email</label>
+              <input
+                id="email"
+                value="sara254@gmail.com"
+                type="email"
+                readonly
+              />
+            </div>
+            <div class="pass">
+              <label for="pass">Password</label>
+              <input id="pass" value="0125@mn%264" type="text" readonly />
+            </div>
+          </div>
+          <div class="save-btn">
+            <a href="#save-changes" class="save">Save Changes</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- -------- favorites ---------- -->
+      <input type="radio" id="fav" name="profile-tabs" />
+      <label for="fav" class="fav-tab">
+        <div class="option">
+          <img src="imgs/fav-heart.png" alt="" />
+          <p class="fav_p">Favourites</p>
+        </div>
+      </label>
+      <!---------- Favs tab ----------->
+
+      <!-- -------- reviews ---------- -->
+      <input type="radio" id="review" name="profile-tabs" />
+      <label for="review" class="review-tab">
+        <div class="option">
+          <img src="imgs/reviews.png" alt="" />
+          <p class="review_p">Reviews</p>
+        </div>
+      </label>
+
+      <!---------- Reviews tab ----------->
+      <div class="tab">
+        <div class="third-tab">
+          <div class="popup-overlay" id="popupOverlay">
+            <div class="popup" id="popup">
+              <div class="popup-content">
+                <p>Review</p>
+                <hr />
+                <div class="rev-title">
+                  <label>Title</label>
+                  <input type="text" />
+                </div>
+                <div class="rev-msg">
+                  <label>Message</label>
+                  <textarea
+                    id="msg"
+                    class="msg-area"
+                    rows="6"
+                    cols="10"
+                  ></textarea>
+                  <div class="msg-icons">
+                    <img src="imgs/bolt-icon.png" alt="" class="bold" width="16">
+                    <img src="imgs/italic-icon.png" alt="" class="italic" width="16">
+                    <img src="imgs/underline-icon.png" alt="" class="underline" width="16">
+                    <img src="imgs/strikethrough-icon.png" alt="" class="strikethrough" width="16">
+                    <img src="imgs/list-icon.png" alt="" class="list" width="16">
+                    <img src="imgs/link_icon.png" alt="" class="link" width="16">
+                    <img src="imgs/unlink-icon.png" alt="" class="unlink" width="16">
+                  </div>
+                  <div class="horiz-line"></div>
+                </div>
+                <div class="popup-btns">
+                  <a href="#cancel" id="closePopup">Cancel</a>
+                  <a href="#send" onclick="sendForm()">Send</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- -------- settings ---------- -->
+      <input type="radio" id="settings" name="profile-tabs" />
+      <label for="settings" class="setting-tab">
+        <div class="option">
+          <img src="imgs/settings.png" alt="" />
+          <p class="setting_p">Settings</p>
+        </div>
+      </label>
+
+      <!-- -------- notifications ---------- -->
+      <input type="radio" id="notifications" name="profile-tabs" />
+      <label for="notifications" class="notif-tab">
+        <div class="option">
+          <img src="imgs/notif.png" alt="" />
+          <p class="setting_p">Notifications</p>
+        </div>
+      </label>
+
+      <!---------- vertical line ----------->
+      <div class="vertical-line"></div>
+
+      <!--======================= banner: right section =======================-->
+
+      <!---------- favs ----------->
+
+      <!---------- reviews ----------->
+    </div>
+    <script src="js/all.min.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
