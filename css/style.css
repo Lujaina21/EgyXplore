@@ -991,7 +991,6 @@ header {
   transition: 0.2s all ease-in-out;
   position: absolute;
 }
-
 .desertTab {
   margin-left: 2rem;
 }
@@ -1007,7 +1006,6 @@ header {
 .beachyTab {
   margin-left: 34rem;
 }
-
 .mytabs label:hover,
 .mytabs input[type="radio"]:checked + label {
   background: var(--main-color);
@@ -1128,7 +1126,7 @@ header {
 .reco-card {
   flex: 0 0 auto;
   width: 369px;
-  height: 394px;
+  height: 339px;
   margin: 1rem 2rem 0 0;
   background-color: white;
   box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.1);
@@ -1148,6 +1146,9 @@ header {
   font-size: 30px;
   margin-left: 9rem;
 }
+.simbel-heart{
+  margin: -26px 0 0 10rem;
+}
 .reco-info .reco-title .mount-heart {
   margin-left: 11.4rem;
 }
@@ -1163,7 +1164,7 @@ header {
   height: 57px;
 }
 .second-updates {
-  margin: 19px 0 0 20px;
+  margin: 26px 0 0 20px;
 }
 .second-updates .third h5,
 .second-updates .second h5 {
