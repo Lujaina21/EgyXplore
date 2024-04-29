@@ -214,6 +214,58 @@ body {
 }
 
 /****************** favourites tab ******************/
+.second-tab {
+  margin: 5rem 0 0 -3rem;
+}
+.fav-cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+}
+.card > img {
+  width: 206px;
+}
+.bottom-card {
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  width: 206px;
+  height: 203px;
+  margin-top: -7px;
+  padding: 11px 17px;
+}
+.bottom-card > h4 {
+  color: white;
+  font-size: 14px;
+  font-weight: var(--font-medium);
+}
+.bottom-card > h6 {
+  color: white;
+  font-size: 10px;
+  font-weight: var(--font-medium);
+  margin-bottom: 15px;
+}
+.bottom-card > p {
+  color: white;
+  font-size: 10px;
+  width: 182px;
+}
+.bottom-card > p > span {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.card1 .bottom-card {
+  background: linear-gradient(to bottom, #9eb8d9, #000000);
+}
+.card2 .bottom-card {
+  background: linear-gradient(to bottom, #c3ac8e, #794b39);
+}
+.card3 .bottom-card {
+  background: linear-gradient(to bottom, #0f8090, #000000);
+}
+.card4 .bottom-card {
+  background: linear-gradient(to bottom, #737373, #000000);
+}
 
 /****************** reviews tab ******************/
 .popup-overlay {
@@ -293,15 +345,12 @@ body {
 .unlink {
   margin-left: 10px;
 }
-.horiz-line{
-    position: relative;
-
+.horiz-line {
+  position: relative;
 }
 .horiz-line::before {
-    content: "";
-    border-bottom: 1px solid black;
-    width: 100%;
-    display: block;
-  }
-
-  
+  content: "";
+  border-bottom: 1px solid black;
+  width: 100%;
+  display: block;
+}
