@@ -92,7 +92,7 @@ header {
   padding: 0 2rem;
   height: 100%;
   width: 100%;
-  background-image: url(/imgs/Group.png);
+  background-image: url("../imgs/Group.png");
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -1146,7 +1146,7 @@ header {
   font-size: 30px;
   margin-left: 9rem;
 }
-.simbel-heart{
+.simbel-heart {
   margin: -26px 0 0 10rem;
 }
 .reco-info .reco-title .mount-heart {
