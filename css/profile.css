@@ -61,17 +61,42 @@ body {
   font-size: 25px;
 }
 .home-btn {
-  margin: 7px 0 0 62rem;
+  margin: 7px 0 0 64rem;
   position: absolute;
   font-size: 25px;
   color: black;
 }
 .user {
-  margin-left: 67rem;
+  transform: translateX(67rem);
 }
 .user > h4 {
   margin: -2.5rem 0 0 4rem;
   font-size: 20px;
+}
+
+@media (max-width: 1056px) {
+  .home-btn {
+    margin-left: 45rem;
+  }
+  .user {
+    transform: translateX(48rem);
+  }
+}
+@media (max-width: 992px) {
+  .home-btn {
+    margin-left: 33rem;
+  }
+  .user {
+    transform: translateX(36rem);
+  }
+}
+@media (max-width: 576px) {
+  .home-btn {
+    margin-left: 7rem;
+  }
+  .user {
+    display: none;
+  }
 }
 
 /*==================== vertical line ====================*/
@@ -354,3 +379,31 @@ body {
   width: 100%;
   display: block;
 }
+
+@media (max-width: 1056px) {
+  .vertical-line {
+    display: none;
+  }
+}
+@media (max-width: 992px) {
+  .popup {
+    width: 30rem;
+  }
+  .popup-btns {
+    margin-left: 19rem;
+  }
+}
+@media (max-width: 576px) {
+  .popup {
+    width: 20rem;
+    margin-left: -44px;
+  }
+  .popup-btns {
+    margin-left: 9rem;
+  }
+  .notif-tab,
+  .setting-tab {
+    display: none;
+  }
+}
+
