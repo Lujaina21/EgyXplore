@@ -238,6 +238,40 @@ body {
   cursor: pointer;
 }
 
+@media (max-width: 1056px) {
+  .first-tab .inputs {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  .fname {
+    margin: -4rem 0 4rem 3rem;
+  }
+  .email {
+    margin: 0 0 1rem 3rem;
+  }
+  .save-btn {
+    margin: 6rem 0 0 7rem;
+  }
+}
+@media (max-width: 992px) {
+  .first-tab .inputs {
+    margin-left: -4rem;
+  }
+  .save-btn {
+    margin-left: 3rem;
+  }
+}
+@media (max-width: 576px) {
+  .first-tab .inputs {
+    margin: 22rem 0 0 -21rem;
+  }
+  .first-tab .inputs input {
+    width: 290px;
+  }
+  .save-btn {
+    margin-left: -15rem;
+  }
+}
 /****************** favourites tab ******************/
 .second-tab {
   margin: 5rem 0 0 -3rem;
