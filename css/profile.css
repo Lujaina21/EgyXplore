@@ -98,11 +98,10 @@ body {
     display: none;
   }
 }
-
 /*==================== vertical line ====================*/
 .vertical-line {
   position: relative;
-  margin-left: 7rem;
+  transform: translateX(17rem);
 }
 .vertical-line::before {
   content: "";
@@ -113,7 +112,8 @@ body {
 
 /*==================== Banner: Left section ====================*/
 .tabs-title {
-  margin: 2rem 0 0 53px;
+  transform: translate(2rem, 53px);
+  position: absolute;
 }
 .mytabs label .option > img {
   margin-left: -10rem;
@@ -136,11 +136,7 @@ body {
 .notif-tab {
   margin-top: 37rem;
 }
-.user-tab,
-.review-tab,
-.fav-tab,
-.notif-tab,
-.setting-tab {
+.all {
   border-top-right-radius: 50px;
   border-bottom-right-radius: 50px;
   transition: 0.2s all ease-in-out;
@@ -156,11 +152,7 @@ body {
 .mytabs input[type="radio"] {
   display: none;
 }
-.user-tab:hover,
-.review-tab:hover,
-.fav-tab:hover,
-.notif-tab:hover,
-.setting-tab:hover,
+.all:hover,
 .mytabs input[type="radio"]:checked + label {
   background: var(--profile-user);
 }
@@ -173,10 +165,39 @@ body {
   display: block;
 }
 
+@media (max-width: 1056px) {
+  .all {
+    width: 15rem;
+  }
+}
+@media (max-width: 576px) {
+  .tabs-title {
+    transform: translate(8rem, 3rem);
+  }
+  .all {
+    background: var(--profile-user);
+    width: 26rem;
+  }
+  .mytabs .tab {
+    display: block;
+  }
+  .fav-tab {
+    transform: translateY(51rem);
+  }
+  .review-tab {
+    transform: translateY(147rem);
+  }
+  .notif-tab {
+    transform: translateY(184rem);
+  }
+  .setting-tab {
+    transform: translateY(184rem);
+  }
+}
 /*==================== Banner: Right section ====================*/
 /****************** user info tab ******************/
 .first-tab .inputs {
-  margin-top: 10rem;
+  transform: translate(15rem, 9rem);
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 30px;
@@ -224,7 +245,7 @@ body {
 }
 
 .save-btn {
-  margin: 9rem 0 0 20rem;
+  transform: translate(34rem, 15rem);
 }
 .save {
   border-radius: 5px;
@@ -258,18 +279,20 @@ body {
     margin-left: -4rem;
   }
   .save-btn {
-    margin-left: 3rem;
+    margin-left: 0rem;
+    transform: translate(17rem, 9rem);
   }
 }
 @media (max-width: 576px) {
   .first-tab .inputs {
-    margin: 22rem 0 0 -21rem;
+    margin: 13rem 0 0 -22rem;
   }
   .first-tab .inputs input {
     width: 290px;
   }
   .save-btn {
-    margin-left: -15rem;
+    width: 14rem;
+    transform: translate(-2rem, 8rem);
   }
 }
 /****************** favourites tab ******************/
@@ -280,6 +303,7 @@ body {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 30px;
+  transform: translateX(17rem);
 }
 .card > img {
   width: 206px;
@@ -326,6 +350,23 @@ body {
   background: linear-gradient(to bottom, #737373, #000000);
 }
 
+@media (max-width: 1056px) {
+  .fav-cards {
+    grid-template-columns: repeat(3, 1fr);
+    transform: translateX(1rem);
+  }
+}
+@media (max-width: 992px) {
+  .fav-cards {
+    grid-template-columns: repeat(2, 1fr);
+    transform: translateX(16rem);
+  }
+}
+@media (max-width: 576px) {
+  .fav-cards {
+    transform: translate(-26rem, 69rem);
+  }
+}
 /****************** reviews tab ******************/
 .popup-overlay {
   display: none;
@@ -422,22 +463,25 @@ body {
 @media (max-width: 992px) {
   .popup {
     width: 30rem;
+    z-index: 1000;
   }
   .popup-btns {
     margin-left: 19rem;
   }
 }
 @media (max-width: 576px) {
-  .popup {
-    width: 20rem;
-    margin-left: -44px;
-  }
-  .popup-btns {
-    margin-left: 9rem;
-  }
-  .notif-tab,
-  .setting-tab {
+  .vertical-line {
     display: none;
   }
-}
 
+  .popup-overlay {
+    position: relative;
+  }
+  .popup {
+    width: 24rem;
+    transform: translate(-60rem, 178rem);
+  }
+  .popup-btns {
+    margin-left: 11rem;
+  }
+}
