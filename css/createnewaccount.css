@@ -68,7 +68,7 @@ ul {
 
 body {
   font-family: "Poppins", sans-serif;
-  background-image: url(../imgs/sign-bg.jpeg);
+  background-image: url(../imgs/sign-bg.png);
   background-size: cover;
   min-height: 100vh;
   width: 100%;
@@ -161,7 +161,7 @@ section {
   top: 20%;
 }
 .container form .last-name {
-  width: 27%;
+  width: 28%;
   height: 80px;
   background-color: var(--icon-back-color);
   border-radius: 25px;
