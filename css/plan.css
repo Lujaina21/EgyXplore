@@ -81,7 +81,7 @@ body {
 header {
   position: relative;
   padding: 0 2rem;
-  height: 100%;
+  height: 138vh;
   width: 100%;
   background-image: url(../imgs/Rectangle\ 434.png);
   background-repeat: no-repeat;
@@ -500,6 +500,17 @@ header {
   .plan-imgs > img:nth-child(2),
   .plan-imgs > img:nth-child(3) {
     width: 13rem;
+  }
+}
+@media (max-width: 576px) {
+  .plan-tit {
+    margin-left: -5rem;
+  }
+  .plan-tit > p {
+    width: 430px;
+  }
+  .plan-imgs {
+    margin-left: -6rem;
   }
 }
 /*==================== Download section ====================*/
