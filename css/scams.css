@@ -68,7 +68,7 @@ body {
 header {
   position: relative;
   padding: 0 2rem;
-  height: 100%;
+  height: 100vh;
   width: 100%;
   background-image: url(../imgs/scams/scams\ bg.png);
   background-repeat: no-repeat;
@@ -231,8 +231,7 @@ header {
 }
 .mid-txts {
   position: absolute;
-  margin-left: 14rem;
-  margin-top: -44rem;
+  margin: -28rem 0 0 10rem;
   color: white;
 }
 .mid-txts > h1 {
@@ -253,6 +252,11 @@ header {
 @media (max-width: 992px) {
   .mid-txts {
     margin-left: 8rem;
+  }
+}
+@media (max-width: 576px) {
+  .mid-txts {
+    margin-left: 2rem;
   }
 }
 /*==================== Stories section ====================*/
@@ -385,7 +389,7 @@ header {
   margin: -5rem 0 0 12rem;
 }
 .btn {
-  padding: 22px 67px;
+  padding: 21px;
   text-align: center;
   color: white;
   background-color: var(--explore-more-color);
@@ -464,44 +468,42 @@ header {
     margin: 9rem 0 0 27rem;
   }
 }
-@media (max-width: 676px) {
+@media (max-width: 576px) {
   .story1 {
     margin-left: 1rem;
   }
   .story2 {
-    margin-left: 6rem;
-    margin-top: 3rem;
+    margin: 3rem 0 0 -1rem;
   }
   .story3 {
-    margin: 28rem 0 0 5rem;
+    margin: 28rem 0 0 0;
   }
   .story4 {
-    margin-top: 28rem;
-    margin-left: -1rem;
+    margin: 28rem 0 0 -1rem;
   }
   .story5 {
-    margin-top: -121rem;
-    margin-left: 1rem;
+    margin: -121rem 0 0 1rem;
   }
   .story6 {
-    margin: 40rem 0 0 -1rem;
+    margin: 42rem 0 0 -1rem;
   }
   .story7 {
-    margin-top: 76rem;
+    margin: 76rem 0 49px -31px;
   }
   .story8 {
-    margin-top: -59rem;
-    margin-left: 3rem;
+    margin: -59rem 0 0 0;
   }
   .story9 {
-    margin: 26rem 0 0 6rem;
+    margin: 26rem 0 0 0;
   }
   .vase-img {
-    margin-top: 3rem;
-    margin-left: -4rem;
+    margin: 3rem 0 0 -5rem;
   }
   .scam-btn {
-    margin: 9rem 0 0 8rem;
+    margin: 9rem 0 0 7rem;
+  }
+  .scam-btn > img {
+    margin-left: 7rem;
   }
 }
 /*==================== Footer ====================*/
