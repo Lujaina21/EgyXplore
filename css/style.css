@@ -393,12 +393,18 @@ header {
     display: none;
   }
 }
-@media (max-width: 800px) {
-  .social-icons {
-    display: none;
-  }
+@media (max-width: 635px) {
   .hi-slide {
     display: none;
+  }
+}
+@media (max-width: 576px) {
+  .texts {
+    transform: translateX(-4rem);
+  }
+  .texts > h1 {
+    font-size: 133px;
+    margin-top: -81px;
   }
 }
 /*==================== Discover ====================*/
@@ -451,17 +457,15 @@ header {
     width: 216px;
   }
 }
-@media (max-width: 750px) {
+@media (max-width: 576px) {
   .discover-field .discover-search {
-    width: 509px;
-    margin-left: -4rem;
-    margin-top: 16rem;
+    width: 424px;
+    margin:16rem 0 0 -8rem;
   }
   .discover-btn .inspire-btn {
-    margin-left: -4rem;
-    margin-top: 3rem;
+    margin: 3rem 0 0 -8rem;
     font-size: 24px;
-    width: 32rem;
+    width: 27rem;
   }
 }
 /*==================== Destinations ====================*/
@@ -614,12 +618,12 @@ header {
     margin-left: 34rem;
   }
 }
-@media (max-width: 660px) {
+@media (max-width: 990px) {
   .img-collection {
     margin-left: 3rem;
   }
   .tit {
-    margin-left: 11rem;
+    margin-left: 9rem;
   }
   .boxC > img {
     width: 28rem;
@@ -666,10 +670,14 @@ header {
     margin-left: -41rem;
   }
   .explore-more {
-    margin-left: 15rem;
+    margin-left: 14rem;
   }
 }
-
+@media (max-width: 576px){
+  .explore-more {
+    margin-left: 11rem;
+  }
+}
 /*==================== Services ====================*/
 .services-boxes {
   margin: 7rem 2rem 6rem 2rem;
@@ -797,6 +805,10 @@ header {
   }
 }
 @media (max-width: 660px) {
+  .ss1-left {
+    margin-left: 10px;
+    gap: 10px;
+  }
   .ss1-left img {
     width: 15rem;
   }
