@@ -57,279 +57,434 @@
   margin: 0;
   padding: 0;
 }
-
 html {
   scroll-behavior: smooth;
 }
-ol{
+
+li {
   list-style: none;
+}
+
+a {
+  text-decoration: none;
 }
 body {
   font-family: "Poppins", sans-serif;
+  height: 150vh;
+}
+/*==================== Navbar ====================*/
+header {
+  position: relative;
+  padding: 0 2rem;
+  height: 100vh;
+  width: 100%;
+  background-image: url(../imgs/pyrr\ shadow.png);
+  background-size: cover;
 }
 
-.emergency-ground{
-    background-image:url(../imgs/pyrr\ shadow.png);
-    width:100%;
-    height:100vh;
-    background-size: cover;
-    position: relative;
-    padding: 0;
-    margin: 0;
-}
-.container .EmergencyServices .info{
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%,-50%);
-}
-.container .EmergencyServices .info h1{
-    text-align: center;
-    color: var(--title-color);
-    font-size: 38.5px;
-    font-weight: 600;
-    padding-bottom: 15px;
-    word-spacing: 5px;
-}
-.container .EmergencyServices .info  p{
-    text-align: center;
-    color: var(--title-color);
-    font-size: 20px;
-    font-weight: 150;
-    width: 500px;
-}
-.container .general_info .section-one{
-    display: grid;
-    grid-template-columns: 500px 500px;
-    padding-top: 50px;
-    align-items:center;
-    justify-content:space-around ;
-    align-content:center;
+.navbar {
+  width: 100%;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
-.container .general_info .right .general{
-    font-size: 35px;
-    margin-top: -100px;
-    padding-bottom: 20px;
-    font-weight: 600;
+.navbar .links {
+  display: flex;
+  gap: 2rem;
+  font-weight: 500;
+  margin-left: 9rem;
 }
-.container .general_info .right li{
-    font-size: 20px;
-    width:500px;
-    padding-bottom:10px
+
+.navbar .links li a {
+  position: relative;
 }
-.container .general_info .right li span{
-    font-size: 25px;
-    font-weight: 500;
+
+.navbar .links li a {
+  color: #ffffff;
 }
-.container .general_info .left img{
-    width: 220px;
-    position: relative;
-    left: 20%;
+
+.navbar .links li a::before {
+  content: "";
+  position: absolute;
+  width: 45%;
+  height: 3px;
+  bottom: -2px;
+  left: 15px;
+  background-color: white;
+  visibility: hidden;
+  transform: scaleX(0);
+  transition: all 0.3s ease-in-out 0s;
 }
-.container .general_info .left img:nth-child(2){
-    padding-bottom: 100Px;
+.navbar .links li a:hover:before {
+  visibility: visible;
+  transform: scaleX(1.1);
 }
-.container .general_info .section-two{
-    display: grid;
-    grid-template-columns: 500px 500px;
-    padding-top: 50px;
-    align-items:center;
-    justify-content:space-around ;
-    align-content:center;
+.profile {
+  margin: -5rem 0 0 70rem;
 }
-.container .general_info .left ol{
-    margin-top: 0px;
+.profile > a > span {
+  color: white;
+  font-size: 20px;
+  margin-top: 11px;
+  margin-left: 15px;
+  position: absolute;
 }
-.container .general_info .left li{
-    font-size: 20px;
-    width:500px;
-    padding-bottom:10px;
+.navbar > select {
+  background-color: #e6e6e6;
+  opacity: 40%;
+  font-size: 13px;
+  height: 19px;
+  font-weight: var(--font-bold);
+  border: none;
+  border-radius: 4px;
+  outline: none;
+  margin-right: 13rem;
 }
-.container .general_info .left li span{
-    font-size: 25px;
-    font-weight: 500;
+
+.navbar .toggle_btn {
+  color: white;
+  font-size: 1.5rem;
+  cursor: pointer;
+  display: none;
+  transition: all 0.3s ease;
 }
-.container .general_info .right img{
-    width: 220px;
-    position: relative;
-    left: 20%;
+
+.navbar .toggle_btn:hover {
+  font-size: 2rem;
+}
+
+/********* DROPDOWN MENU *********/
+.dropdown_menu {
+  position: absolute;
+  right: 2rem;
+  top: 100px;
+  width: 300px;
+  height: 0;
+  background: rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(15px);
+  border-radius: 10px;
+  overflow: hidden;
+  transition: height 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.dropdown_menu.open {
+  position: absolute;
+  height: 150px;
+  z-index: 1;
+}
+
+.dropdown_menu li {
+  padding: 0.7rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dropdown_menu li a {
+  position: relative;
+  color: #ffffff;
+}
+
+.dropdown_menu li a::before {
+  content: "";
+  position: absolute;
+  width: 45%;
+  height: 3px;
+  bottom: -2px;
+  left: 15px;
+  background-color: white;
+  visibility: hidden;
+  transform: scaleX(0);
+  transition: all 0.3s ease-in-out 0s;
+}
+.dropdown_menu li a:hover:before {
+  visibility: visible;
+  transform: scaleX(1.1);
+}
+
+/****** Responsive Nav ******/
+@media (max-width: 992px) {
+  .navbar .links {
+    display: none;
+  }
+  .navbar .toggle_btn {
+    display: block;
+  }
+  .navbar select {
+    display: none;
+  }
+  .profile {
+    display: none;
+  }
+}
+@media (max-width: 576px) {
+  .dropdown_menu {
+    left: 2rem;
+    width: unset;
+  }
+  .navbar select {
+    display: none;
+  }
+  .profile {
+    display: none;
+  }
+}
+
+/*==================== Emergency ground section ====================*/
+.container .EmergencyServices .info {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.container .EmergencyServices .info h1 {
+  text-align: center;
+  color: var(--title-color);
+  font-size: 38.5px;
+  font-weight: 600;
+  padding-bottom: 15px;
+  word-spacing: 5px;
+}
+.container .EmergencyServices .info p {
+  text-align: center;
+  color: var(--title-color);
+  font-size: 20px;
+  font-weight: 150;
+  width: 500px;
+}
+.container .general_info .section-one {
+  display: grid;
+  grid-template-columns: 500px 500px;
+  padding-top: 50px;
+  align-items: center;
+  justify-content: space-around;
+  align-content: center;
+}
+
+.container .general_info .right .general {
+  font-size: 35px;
+  margin-top: -100px;
+  padding-bottom: 20px;
+  font-weight: 600;
+}
+.container .general_info .right li {
+  font-size: 20px;
+  width: 500px;
+  padding-bottom: 10px;
+}
+.container .general_info .right li span {
+  font-size: 25px;
+  font-weight: 500;
+}
+.container .general_info .left img {
+  width: 220px;
+  position: relative;
+  left: 20%;
+}
+.container .general_info .left img:nth-child(2) {
+  padding-bottom: 100px;
+}
+.container .general_info .section-two {
+  display: grid;
+  grid-template-columns: 500px 500px;
+  padding-top: 50px;
+  align-items: center;
+  justify-content: space-around;
+  align-content: center;
+}
+.container .general_info .left ol {
+  margin-top: 0px;
+}
+.container .general_info .left li {
+  font-size: 20px;
+  width: 500px;
+  padding-bottom: 10px;
+}
+.container .general_info .left li span {
+  font-size: 25px;
+  font-weight: 500;
+}
+.container .general_info .right img {
+  width: 220px;
+  position: relative;
+  left: 20%;
 }
 /*      start of vacciens       */
-.container .vacciens{
+.container .vacciens {
   display: grid;
-    grid-template-columns: 500px 500px;
-    padding-top: 50px;
-    align-items:center;
-    justify-content:space-around ;
-    align-content:center;
+  grid-template-columns: 500px 500px;
+  padding-top: 50px;
+  align-items: center;
+  justify-content: space-around;
+  align-content: center;
 }
-.container .vacciens .right{
+.container .vacciens .right {
   margin-top: -20px;
 }
-.container .vacciens .right h1{
+.container .vacciens .right h1 {
   font-size: 25px;
   padding-bottom: 10px;
 }
-.container .vacciens .right ul{
+.container .vacciens .right ul {
   padding-left: 60px;
 }
-.container .vacciens .right ul li{
+.container .vacciens .right ul li {
   padding-top: 10px;
 }
-.container .vacciens .left img{
+.container .vacciens .left img {
   width: 265px;
 }
-.container .telephone{
+.container .telephone {
   padding-top: 20px;
 }
-.container .telephone p{
+.container .telephone p {
   font-size: 18px;
   font-weight: 600;
 }
 /*          end of vaccien      */
 /*              start of toursit      */
-.container .tourist-assisance{
+.container .tourist-assisance {
   display: grid;
-    grid-template-columns: 500px 500px;
-    padding-top: 50px;
-    align-items:center;
-    justify-content:space-around ;
-    align-content:center;
+  grid-template-columns: 500px 500px;
+  padding-top: 50px;
+  align-items: center;
+  justify-content: space-around;
+  align-content: center;
 }
-.container .tourist-assisance .right{
+.container .tourist-assisance .right {
   margin-top: -80px;
 }
-.container .tourist-assisance .right p{
+.container .tourist-assisance .right p {
   font-size: 20px;
   padding-bottom: 10px;
   font-weight: 600;
 }
-.container .tourist-assisance .right ul{
+.container .tourist-assisance .right ul {
   padding-left: 60px;
 }
-.container .tourist-assisance .right ul li{
+.container .tourist-assisance .right ul li {
   padding-top: 10px;
 }
-.container .tourist-assisance  .left img{
+.container .tourist-assisance .left img {
   width: 150px;
   margin-top: 150px;
-
 }
-.container .telephone{
+.container .telephone {
   padding-top: 20px;
 }
-.container .telephone p{
+.container .telephone p {
   font-size: 18px;
   font-weight: 600;
 }
 /*     end of tourist     */
 .container .safety {
-display: flex;
-flex-direction: column;
-justify-content: first space-around;
+  display: flex;
+  flex-direction: column;
+  justify-content: first space-around;
 
-margin-top: -50px;
-width: 900px;
-margin-left: 60px;
-position: absolute;
-left: 15%;
-transform: translate(-15%);
+  margin-top: -50px;
+  width: 900px;
+  margin-left: 60px;
+  position: absolute;
+  left: 15%;
+  transform: translate(-15%);
 }
-.container .safety ul{
+.container .safety ul {
   padding-left: 60px;
   padding-top: 20px;
 }
 @media (min-width: 0px) and (max-width: 480px) {
-  .container .general_info .section-one{
+  .container .general_info .section-one {
     display: block;
     width: 250px;
   }
-  .container .general_info .left img{
+  .container .general_info .left img {
     display: none;
   }
-  .container .general_info .section-two{
+  .container .general_info .section-two {
     display: block;
     width: 250px;
   }
-  .container .general_info .right img{
+  .container .general_info .right img {
     display: none;
   }
-  .container .vacciens .left img{
+  .container .vacciens .left img {
     display: none;
   }
-  .container .tourist-assisance .left img{
+  .container .tourist-assisance .left img {
     display: none;
   }
   .container .tourist-assisance .right p {
     padding-top: 60px;
     width: 250px;
   }
-  .section .container .safety{
+  .section .container .safety {
     padding-top: 60px;
     width: 300px;
   }
-  .emergency-ground{
+  .emergency-ground {
     width: 150%;
   }
 }
 @media (min-width: 485px) and (max-width: 768px) {
-  .emergency-ground{
+  .emergency-ground {
     width: 100%;
   }
-  .container .general_info .left img{
+  .container .general_info .left img {
     display: none;
   }
-  .container .general_info .section-two{
+  .container .general_info .section-two {
     display: block;
     width: 250px;
   }
-  .container .general_info .right img{
+  .container .general_info .right img {
     display: none;
   }
-  .container .vacciens .left img{
+  .container .vacciens .left img {
     display: none;
   }
-  .container .tourist-assisance .left img{
+  .container .tourist-assisance .left img {
     display: none;
   }
   .container .tourist-assisance .right p {
     padding-top: 60px;
     width: 250px;
   }
-  .section .container .safety{
+  .section .container .safety {
     padding-top: 60px;
     width: 300px;
   }
 }
 @media (min-width: 770px) and (max-width: 992px) {
-  .container .general_info .section-one{
+  .container .general_info .section-one {
     display: block;
     width: 250px;
     padding-left: 25%;
   }
-  .container .general_info .left img{
+  .container .general_info .left img {
     display: block;
     width: 150px;
   }
-  .container .general_info .section-two{
+  .container .general_info .section-two {
     display: block;
     width: 250px;
     padding-left: 25%;
   }
-  .container .general_info .right img{
+  .container .general_info .right img {
     display: block;
     width: 150px;
   }
-  .container .vacciens .left img{
+  .container .vacciens .left img {
     display: block;
   }
-  .container .tourist-assisance .left img{
+  .container .tourist-assisance .left img {
     display: block;
     padding-left: 25%;
     width: 150px;
   }
-  .container .vacciens .left img{
+  .container .vacciens .left img {
     width: 150px;
   }
   .container .tourist-assisance .right p {
@@ -337,19 +492,19 @@ transform: translate(-15%);
     width: 250px;
     padding-left: 25%;
   }
-  .section .container .safety{
+  .section .container .safety {
     padding-top: 60px;
     width: 300px;
   }
-  .container .tourist-assisance .left img{
+  .container .tourist-assisance .left img {
     width: 120px;
   }
-  .emergency-ground{
+  .emergency-ground {
     width: 150%;
   }
 }
 @media (min-width: 993px) and (max-width: 1200px) {
-  .emergency-ground{
+  .emergency-ground {
     width: 110%;
   }
 }
