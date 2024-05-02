@@ -460,7 +460,7 @@ header {
 @media (max-width: 576px) {
   .discover-field .discover-search {
     width: 424px;
-    margin:16rem 0 0 -8rem;
+    margin: 16rem 0 0 -8rem;
   }
   .discover-btn .inspire-btn {
     margin: 3rem 0 0 -8rem;
@@ -673,7 +673,7 @@ header {
     margin-left: 14rem;
   }
 }
-@media (max-width: 576px){
+@media (max-width: 576px) {
   .explore-more {
     margin-left: 11rem;
   }
@@ -1154,12 +1154,12 @@ header {
   height: 152px;
   padding: 0px 8px 12px 8px;
 }
-.reco-info .reco-title .fa-heart {
+.reco-info .reco-title > img {
   font-size: 30px;
   margin-left: 9rem;
 }
 .simbel-heart {
-  margin: -26px 0 0 10rem;
+  margin: -26px 0 0 19.5rem;
 }
 .reco-info .reco-title .mount-heart {
   margin-left: 11.4rem;
