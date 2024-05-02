@@ -60,3 +60,17 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
+/*================ Change img in recommended section ===============*/
+const img = document.querySelectorAll(".heart-img");
+let toggle = true; //toggling bet imgs
+img.forEach((img) => {
+  img.addEventListener("click", function () {
+    toggle = !toggle;
+    if (toggle) {
+      img.src = "./imgs/heart-icon 2.png";
+    } else {
+      img.src = "./imgs/red-heart.png";
+    }
+  });
+});
+
