@@ -8,11 +8,11 @@ const preBtn = [...document.querySelectorAll(".pre-btn")];
 
 recommendContainer.forEach((item, i) => {
   nxtBtn[i].addEventListener("click", () => {
-    item.scrollLeft += 382;
+    item.scrollLeft += 403;
   });
 
   preBtn[i].addEventListener("click", () => {
-    item.scrollLeft -= 382;
+    item.scrollLeft -= 403;
   });
 });
 
@@ -62,7 +62,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 /*================ Change img in recommended section ===============*/
 const img = document.querySelectorAll(".heart-img");
-let toggle = true; //toggling bet imgs
+let toggle = true;
 img.forEach((img) => {
   img.addEventListener("click", function () {
     toggle = !toggle;
@@ -73,4 +73,3 @@ img.forEach((img) => {
     }
   });
 });
-
