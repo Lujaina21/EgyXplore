@@ -73,3 +73,18 @@ img.forEach((img) => {
     }
   });
 });
+
+/*================ Img upload in scan section ===============*/
+const drop_area = document.getElementById("drop-area");
+const choose_file = document.getElementById("choose-file");
+const img_view = document.querySelector(".img-view");
+
+choose_file.addEventListener("change", upload_img);
+
+function upload_img() {
+  // choose_file.files[0];   //the file that is uploaded in the input field
+  let imgLink = URL.createObjectURL(choose_file.files[0]);
+  img_view.style.backgroundImage = `url(${imgLink})`;
+  img_view.textContent = "";
+  img_view.style.border = "none";
+}
