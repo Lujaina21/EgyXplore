@@ -305,6 +305,8 @@ header {
   margin: -19rem 0 0 74rem;
   font-size: 35px;
   position: relative;
+  display: flex;
+  flex-direction: column;
 }
 .social-icons > a {
   color: white;
@@ -3269,3 +3271,4 @@ header {
   cursor: pointer;
 }
 /*end of footer*/
+
